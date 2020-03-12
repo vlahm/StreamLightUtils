@@ -25,12 +25,12 @@
 NLDAS_DL_bulk <- function(save_dir, site_locs, startDate){
   #Download NLDAS data for all sites
     if(hasArg(startDate) == TRUE){
-      mapply(NLDAS_DL, save_dir = DL_NLDAS_dir, site_locs[, "Site_ID"], site_locs[, "Lat"],
-        site_locs[, "Lon"], stardDate)
+      mapply(NLDAS_DL, save_dir = save_dir, site_locs[, "Site_ID"], site_locs[, "Lat"],
+        site_locs[, "Lon"], startDate)
     }
 
     if(hasArg(startDate) == FALSE){
-      mapply(NLDAS_DL, save_dir = DL_NLDAS_dir, site_locs[, "Site_ID"], site_locs[, "Lat"],
+      mapply(NLDAS_DL, save_dir = save_dir, site_locs[, "Site_ID"], site_locs[, "Lat"],
         site_locs[, "Lon"], site_locs[, "startDate"])
     }
 
