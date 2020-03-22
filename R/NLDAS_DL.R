@@ -32,7 +32,7 @@ NLDAS_DL <- function(save_dir, Site_ID, Lat, Lon, startDate){
     destfile <- paste(save_dir, "/", Site_ID, "_NLDAS.asc", sep = "")
 
   #Error catch in case the page is inaccessible. A little inelegant at present...
-    try_result <- try(download.file(url, destfile), silent = FALSE)
+    try_result <- try(download.file(url, destfile, method = "curl"), silent = FALSE)
 
     if(class(try_result) == "try-error") {file.remove(destfile)}
 
