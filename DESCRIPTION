@@ -1,7 +1,7 @@
 Package: StreamLightUtils
 Type: Package
 Title: What the Package Does (Title Case)
-Version: 0.1.0
+Version: 0.1.1
 Author: Phil Savoy
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: This is a series of utilities designed to generate driver files
